@@ -1,0 +1,333 @@
+body{
+
+    margin: 0;
+
+    display: flexbox;
+
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#page-heading{
+
+    text-align: center;
+    margin-top: 25px;
+    color: grey;
+    font-family: 'Roboto', sans-serif;
+    font-size: 5vw;
+}
+
+#tasks-list{
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-around;
+
+    font-family: 'Roboto', sans-serif;
+
+    font-weight: bold;
+
+    font-size: 1.2vw;
+
+    align-items: center;
+
+    vertical-align: middle;
+}
+
+.task-card{
+
+    height: 10vh;
+    width: 50vw;
+    margin: 1vh;
+    background-color: lightblue;
+    box-shadow: 1px 2px 2px  #d9d9d9;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    border-radius: 1% / 10%;
+    vertical-align: middle;
+    align-items: center;
+}
+
+.task-card i{
+
+    font-size: 2vw;
+    color: white;
+    margin-right: 1vw;
+}
+
+.task-card i:hover{
+
+    color: #d9d9d9;
+}
+
+.task-details{
+
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 1vw;
+    vertical-align: middle;
+    align-items: center;
+    margin-top: 1.2vh;
+}
+
+.task-details p{
+
+    margin-left: 1vw;
+}
+
+#tasks-list div p{
+
+    color: black;
+    vertical-align: middle;
+}
+
+#tasks-list div:hover{
+
+    background-color: grey;
+}
+
+#tasks-list div i{
+
+    margin: 0px;
+
+    display: inline-block;
+}
+
+#form{
+
+    position: relative;
+    left: 38%;
+}
+
+body input{
+
+    margin-top: 3%;
+    border-width: 0px 0px 2px 0px;
+    width: 10vw;
+}
+
+body button{
+
+    background-color: gray;
+
+    border: 0px;
+
+    padding: 1%;
+
+    border-radius: 5%;
+}
+
+form button p{
+    color:  white; /* Change "red" to the desired color value */
+    margin: 0px;
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+  }
+
+body button:hover{
+
+    background-color: #d9d9d9;
+}
+
+#form{
+
+    display: inline;
+}
+
+.personal{
+
+    background-color: #fbf7d5;
+}
+
+.personal::before {
+    content: "Personal";
+    display: inline-block;
+    background-color: #fbf7d5;
+    padding: 0px;
+    border-right: 2px solid black;
+    margin: 0px 10px 0px 0px;
+    padding-right: 1vw;
+}
+
+.school{
+
+    background-color: #c6f8e5;
+}
+
+.school::before {
+    content: "School";
+    display: inline-block;
+    background-color: #c6f8e5;
+    padding: 0px;
+    border-right: 2px solid black;
+    margin: 0px 10px 0px 0px;
+    padding-right: 1vw;
+}
+
+.work{
+
+    background-color: #cce1f2;
+}
+
+.work::before {
+    content: "Work";
+    display: inline-block;
+    background-color: #cce1f2;
+    padding: 0px;
+    border-right: 2px solid black;
+    margin: 0px 10px 0px 0px;
+    padding-right: 1vw;
+}
+
+.cleaning{
+
+    background-color: #f9ded7;
+}
+
+.cleaning::before {
+    content: "Cleaning";
+    display: inline-block;
+    background-color: #f9ded7;
+    padding: 0px;
+    border-right: 2px solid black;
+    margin: 0px 10px 0px 0px;
+    padding-right: 1vw;
+}
+
+.others{
+
+    background-color: #f5cdde;
+}
+
+.others::before {
+    content: "Others";
+    display: inline-block;
+    background-color: #f5cdde;
+    padding: 0px;
+    border-right: 2px solid black;
+    margin: 0px 10px 0px 0px;
+    padding-right: 1vw;
+}
+
+#delete-checked-icon{
+
+    color: black;
+
+    font-size: 4rem;
+
+    position: relative;
+
+    left:0;
+
+    transform: translate(15vw, 10vh);
+}
+
+#delete-checked-icon::after{
+
+    font-size: 1vw;
+    content: "Delete checked tasks";
+    display: inline-block;
+    padding: 0px;
+    transform: translate(-7vw, 4vh);
+}
+
+.sort-by-div{
+
+    display: flex;
+
+    justify-content: center;
+}
+
+.sort-by-p{
+
+    display: flex;
+
+    vertical-align: middle;
+
+    align-items: center;
+
+    margin: 1vw;
+}
+
+#name-btn{
+
+    padding: 10px 5px 1px 5px;
+
+    font-size: 1vw;
+
+    background-color: grey;
+
+    border: none;
+}
+
+#rank-btn{
+
+    padding: 10px 5px 1px 5px;
+
+    font-size: 1vw;
+
+    background-color: grey;
+
+    border: none;
+}
+
+@media only screen and (max-width: 1200px) {
+
+    #tasks-list{
+
+        font-size: 1.5vw;
+    }
+
+    #name-btn{
+
+        font-size: 1vw;
+    }
+
+    #rank-btn{
+
+        font-size: 1vw;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+
+    #tasks-list{
+
+        font-size: 2vw;
+    }
+
+    #name-btn{
+
+        font-size: 1.5vw;
+    }
+
+    #rank-btn{
+
+        font-size: 1.5vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    #tasks-list{
+
+        font-size: 3vw;
+    }
+
+    #name-btn{
+
+        font-size: 2vw;
+    }
+
+    #rank-btn{
+
+        font-size: 2vw;
+    }
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/css/home.css">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script src="https://kit.fontawesome.com/fe69022f97.js" crossorigin="anonymous"></script>
+
+    <title><%= title %></title>
+</head>
+<body>
+    <h1 id="page-heading"><i class="fa-regular fa-rectangle-list"></i> Task List</h1>
+
+    
+
+    <div>
+
+        <div id="tasks-list">
+
+                <% for(let i=0;i<task_list.length;i++){ %>
+
+                <div class="task-card <%= task_list[i].type %>">
+                    
+                    <% if(!task_list[i].checked){ %>
+
+                        <a href="/mark-task/?id=<%= task_list[i]._id %>"><i class="fa-regular fa-square"></i></a>
+
+                        <%}%>
+
+                    <% if(task_list[i].checked){ %>
+
+                        <a href="/unmark-task/?id=<%= task_list[i]._id %>"><i class="fa-solid fa-square-check"></i></a>
+                        <%}%>
+                    <div class="task-details">
+                    <p class="name"> <%= task_list[i].name %> </p>
+                    <p class="date"><%= task_list[i].date %></p>
+                    </div>    
+                    
+                    <a href="/delete-task/?id=<%= task_list[i]._id %>"><i class="fa-solid fa-square-minus"></i></a>
+                </div>
+                    
+                <%}%>
+            </div>
+    </div>
+
+    <div class="form-div">
+    
+        <form action="/create-task" method="post" id="form">
+        
+            <select name="type" id="type">
+                <option value="personal">Personal</option>
+                <option value="school">School</option>
+                <option value="work">Work</option>
+                <option value="cleaning">Cleaning</option>
+                <option value="others">Others</option>
+            </select>
+
+            <input type="text" name="name" placeholder="Name">
+        
+            <input type="date" name="date" placeholder="Date">
+        
+            <button type="submit">
+                <p>Add Task</p>
+            </button>
+        
+        </form>
+
+        <a href="/delete-all-checked"><i class="fa-solid fa-trash" id="delete-checked-icon"></i></a>
+
+    </div>
+
+    
+
+</body>
+</html>
